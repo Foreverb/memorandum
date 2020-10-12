@@ -1,29 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <NavBar/>
+    <List/>
+    <Dialog v-if="$store.state.showDialog"/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import {Component,Vue} from "vue-property-decorator";
+import NavBar from "./components/navBar.vue";
+import List from "./components/list.vue";
+import Dialog from "./components/editDialog.vue";
 
 @Component({
   components: {
-    HelloWorld,
-  },
+    NavBar,
+    List,
+    Dialog
+  }
 })
-export default class App extends Vue {}
+export default class App extends Vue{
+  
+}
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+#app{
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("./assets/ba.jpeg")
 }
 </style>

@@ -22,3 +22,9 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+"browserslist": [
+            "> 1%",
+            "last 2 versions",
+            "not dead"
+        ]
